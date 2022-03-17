@@ -136,13 +136,16 @@ function soNhiPhan(n){
     return stack.reverse().join('');
 }
 console.log('cau13 so nhi phan', soNhiPhan(12))
+
+
 function soBatPhan(n){
-    var ketqua=0;
-    for(var k=0; k<=n; k++){
-        ketqua += (n % 8) * Math.pow(10,k);
-        n /= 8;
-    }
-    return ketqua
+    let ketqua ="";
+
+    while (n > 0) {
+        ketqua += `${n % 8}`;
+        n = Math.floor(n / 8);
+      }
+      return ketqua.split("").reverse().join("");
 
 }
 // const soBatPhan=(n)=> ()
